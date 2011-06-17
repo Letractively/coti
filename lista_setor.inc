@@ -23,19 +23,19 @@ include_once "config.php";
        echo "</tr>";
        //$nomecoluna = mysql_field_name($result, $i);
        echo "<tr>";
-       echo "<td colspan='5'> Existem ". $numlinha . "  setores cadastrados </td>";
+       echo "<td colspan='5'> Existe ". $numlinha . "  setore(s) cadastrado(s) </td>";
        echo "</tr>";
        if($numlinha > 0)
        {
             
-            echo "<tr >";//bgcolor= '#336B00'
+            echo "<tr>";// bgcolor= '#336B00' color= '#FFFFFF'
             $numcoluna = mysql_num_fields($result_2); // diz o numero de colunas
 
             echo "<td class='tdh1top'>Sigla</td>";
             echo "<td class='tdh1top'>Nome</td>";
             echo "<td class='tdh1top'>Telefone</td>";
             echo "<td class='tdh1top'>Departamento</td>";
-            echo "<td class='tdh1top'>A&ccedil;&otilde;es </td>";
+            echo "<td class='tdh1top'>Op&ccedil;&otilde;es </td>";
             echo "<tr />";
             
             //echo "<tr />";
@@ -71,7 +71,7 @@ include_once "config.php";
        }
     ///////////////////////////////////////
     echo "</table>";
-    echo "<a href= 'setores.php'> Voltar </a>";  
+    echo "<a href= 'departamentos.php'> <strong> << Voltar </strong></a>";  
     $libera = mysql_free_result($result_2);
   }    
 ?>

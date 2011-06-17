@@ -1,62 +1,8 @@
-<!DOCTYPE HTML>
-
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTP-8"/>
-        <title>CoTI - Contrata&ccedil;&atilde;o de TI</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <script type="text/javascript" src="scripts.js"></script>
-    </head>
-    <body>
-        <div id="prin">
-            <!-- inicio #header -->
-            <div>
-                <?php
-                $pg = $_GET['pg'];
-                $ext = ".php";
-                if (file_exists($pg . $ext)) {
-                    include($pg . $ext);
-                } else {
-                    include("header.php");
-                }
-                ?>
-            </div>
-            <!-- fim #header -->
-            <!-- inicio wrapper -->
-            <div id="wrapper">
-                <!-- inicio #menu -->
-                <div>
-                    <?php
-                    $pg = $_GET['pg'];
-                    $ext = ".php";
-                    if (file_exists($pg . $ext)) {
-                        include($pg . $ext);
-                    } else {
-                        include("menu.php");
-                    }
-                    ?>
-                </div>
-                <!-- fim #menu -->
-                <!-- inicio #pagina -->
-                <div id="pagina">
-                    <!-- inicio #pagina bgtopo -->
-                    <div id="pagina-bgtopo">
-                        <!-- inicio #pagina bgbtm -->
-                        <div id="pagina-bgbtm">
-                            <!-- inicio #menu esquerdo -->
-                            <div id="bar">
-                                <?php
-                                $pg = $_GET['pg'];
-                                $ext = ".php";
-                                if (file_exists($pg . $ext)) {
-                                    include($pg . $ext);
-                                } else {
-                                    include("sidebar.php");
-                                }
-                                ?>
-                            </div>
-                            <!-- fim #menuesquerdo -->
+<?php
+    include_once 'default.php';
+    include_once 'funcoes.php';
+    include_once 'data.php';
+?>
                             <!-- inicio #conteudo -->
                             <div id="content">
 
@@ -70,13 +16,13 @@
                                         </tr>
                                         <tr>
                                             <td>Unidade/Setor/Departamento:</td>
-                                            <td> <select name="dod_f1_setor" id="dod_f1_setor">
-                                                    <option value="escolhersetor" selected="selected">Escolher Setor</option>
-                                                    <option value="escolheroutro">Outro Setor</option>
-                                                </select>
+                                            <td> 
+                                                <!-- Aqui deve conter o nome do setor em que o funcionário que abriu o DOD está cadastrado, forma atual apenas para teste -->
+                                                    
+                                                    <?= lista_depart() ?>
+                                                
                                             </td>
-                                            <td>Data: </td>
-                                            <td> <input type="text" name="dod_f1_data" id="dod_f1_data" class="caixa" onfocus="blur()" /> </td>
+                                            <td colspan="2">Data: <input type="text" name="dod_f1_data" id="dod_f1_data" class="caixa" value="<?php seta_data(); ?>"/> </td>
                                         </tr>
                                         <tr>
                                             <td>Nome do Projeto: </td>
@@ -84,7 +30,10 @@
                                         </tr>
                                         <tr>
                                             <td>Resp. pela Demanda: </td>
-                                            <td> <input type="text" name="dod_f1_respdem" id="dod_f1_respdem" /> </td>
+                                             <!-- Aqui deve conter a lista de usuários da categoria do setor requisitante, nesse formato apenas para teste -->
+                                            <td> 
+                                                 <?= lista_user_setor() ?> 
+                                            </td>
                                             <td>Tel. do Respons&aacute;vel: </td>
                                             <td> <input type="text" name="dod_f1_respdemtel" id="dod_f1_respdemtel" class="caixa" onfocus="blur()" /> </td>
                                         </tr>
@@ -96,7 +45,10 @@
                                         </tr>
                                         <tr>
                                             <td>Integrante Requisitante: </td>
-                                            <td> <input type="text" name="dod_f1_intreq" id="dod_f1_intreq" /> </td>
+                                             <!-- Aqui deve conter a lista de usuários da categoria do setor requisitante, nesse formato apenas para teste -->
+                                            <td> 
+                                                 <?= lista_user_setor() ?>
+                                            </td>
                                             <td>Telefone do I.R.: </td>
                                             <td> <input type="text" name="dod_f1_intreqtel" id="dod_f1_intreqtel" class="caixa" onfocus="blur()" /></td>
                                         </tr>
@@ -121,28 +73,6 @@
                                 </table>
                             </div>
                             <!-- fim #conteudo -->
-                            <div style="clear: both;"></div>
-                        </div>
-                        <!-- fim #pagina bgbtm -->
-                    </div>
-                    <!-- fim #pagina tbgopo -->
-                </div>
-                <!-- fim #pagina -->
-            </div>
-            <!-- fim wrapper -->
-            <!-- inicio footer -->
-            <div>
-                <?php
-                                $pg = $_GET['pg'];
-                                $ext = ".php";
-                                if (file_exists($pg . $ext)) {
-                                    include($pg . $ext);
-                                } else {
-                                    include("footer.php");
-                                }
-                ?>
-            </div>
-            <!-- fim #footer -->
-        </div>
-    </body>
-</html>
+                            <?php 
+    include_once 'footer.php'; 
+?>

@@ -5,7 +5,8 @@ if(isset($_SESSION['usuario']))
 {
 $id = $_SESSION['usuario'];
 
-include_once 'grosso_pagina.php'; 
+include_once 'default.php';
+include_once 'funcoes.php';
 ?>
     <div id="content">
 
@@ -30,7 +31,10 @@ include_once 'grosso_pagina.php';
                 <td colspan="4">&nbsp; </td>
             </tr>
             <tr>
-                <td colspan="4" align="right"> <input type="reset" name="cadcargo_reset" value="Limpar" style="font-weight:bold" /> &nbsp; <input type="submit" name="cadcargo_edit" value="Editar" style="font-weight:bold" /> &nbsp; <input type="submit" name="cadcargo_enviar" value="Salvar" style="font-weight:bold"  /> </td>
+                <td colspan="4" align="right"> 
+                    <input type="reset" name="cadcargo_reset" value="Limpar" style="font-weight:bold" /> &nbsp; 
+<!--                    <input type="submit" name="cadcargo_edit" value="Editar" style="font-weight:bold" /> &nbsp; -->
+                    <input type="submit" name="cadcargo_enviar" value="Salvar" style="font-weight:bold"  /> </td>
 
             </tr>
         </form>
@@ -40,7 +44,7 @@ include_once 'grosso_pagina.php';
         
     </div>                                                      
 <?php 
-include_once 'grosso_fim_pagina.php'; 
+include_once 'footer.php'; 
 }
  else
  {

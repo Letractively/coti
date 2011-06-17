@@ -21,7 +21,7 @@ include_once "config.php";
        echo "</tr>";
        //$nomecoluna = mysql_field_name($result, $i);
        echo "<tr>";
-       echo "<td colspan='4'> Existem ". $numlinha . "  cargos cadastrados </td>";
+       echo "<td colspan='4'> Existe ". $numlinha . "  cargo(s) cadastrado(s) </td>";
        echo "</tr>";
        if($numlinha > 0)
        {
@@ -67,7 +67,7 @@ include_once "config.php";
        }
     ///////////////////////////////////////
     echo "</table>";
-    echo "<a href= 'cargos.php'> Voltar </a>";  
+    echo "<a href= 'cargos.php'> <strong> << Voltar </strong></a>";
       
 }
 echo "</div>";

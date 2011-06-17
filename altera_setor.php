@@ -7,7 +7,7 @@ if(isset($_SESSION['usuario']))
    $id = $_SESSION['usuario'];
 
     include_once "config.php";
-    include_once "grosso_pagina.php"; 
+    include_once "default.php"; 
     echo "<div id='content'>";
     
     if(isset($_POST["excluir_id"]))//Verifica se a variável foi postada
@@ -28,7 +28,7 @@ if(isset($_SESSION['usuario']))
          
          include_once 'lista_setor.inc';
          
-         echo "<a href= 'setores.php'> Voltar </a>";  
+         echo "<a href= 'setores.php'> <strong> << Voltar </strong></a>";
         }
     }
     if(isset($_POST["editar"]))    
@@ -120,7 +120,7 @@ if(isset($_SESSION['usuario']))
 //               }
 //            ///////////////////////////////////////
 //            echo "</table>";
-            echo "<a href= 'setores.php'> Voltar </a>";  
+            echo "<a href= 'setores.php'> <strong> << Voltar </strong></a>";  
           }    
         }
         
@@ -128,7 +128,7 @@ if(isset($_SESSION['usuario']))
     echo "</div>";
     $libera = mysql_free_result($result);
     //$libera = mysql_free_result($result_2);
-    include_once 'grosso_fim_pagina.php';//escreve o fim do cabeçalho da página
+    include_once 'footer.php';//escreve o fim do cabeçalho da página
 }
 else
 {

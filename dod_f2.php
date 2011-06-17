@@ -1,76 +1,21 @@
 <?php
 
-//include (func_conect.php);
-$dod_setor = $_POST['dod_f1_setor'];
-$dod_data = $_POST['dod_f1_data'];
-$dod_nomeproj = $_POST['dod_f1_nomeproj'];
-$dod_respdem = $_POST['dod_f1_respdem'];
-$dod_respdemtel = $_POST['dod_f1_respdemtel'];
-$dod_respmail = $_POST['dod_f1_respmail'];
-$dod_respsiape = $_POST['dod_f1_respsiape'];
-$dod_intreq = $_POST['dod_f1_intreq'];
-$dod_intreqtel = $_POST['dod_f1_intreqtel'];
-$dod_intreqmail = $_POST['dod_f1_intreqmail'];
-$dod_fonterec = $_POST['dod_f1_fonterec'];
+    //include (func_conect.php);
+    //$dod_setor = $_POST['dod_f1_setor'];
+    $dod_data = $_POST['dod_f1_data'];
+    $dod_nomeproj = $_POST['dod_f1_nomeproj'];
+    //$dod_respdem = $_POST['dod_f1_respdem'];
+    $dod_respdemtel = $_POST['dod_f1_respdemtel'];
+    $dod_respmail = $_POST['dod_f1_respmail'];
+    $dod_respsiape = $_POST['dod_f1_respsiape'];
+   // $dod_intreq = $_POST['dod_f1_intreq'];
+    $dod_intreqtel = $_POST['dod_f1_intreqtel'];
+    $dod_intreqmail = $_POST['dod_f1_intreqmail'];
+    $dod_fonterec = $_POST['dod_f1_fonterec'];
 
+    include_once 'default.php';
+    include_once 'data.php';
 ?>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTP-8"/>
-        <title>CoTI - Contrata&ccedil;&atilde;o de TI</title>
-        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <script type="text/javascript" src="scripts.js"></script>
-    </head>
-    <body>
-        <div id="prin">
-            <!-- inicio #header -->
-            <div>
-                <?php
-                $pg = $_GET['pg'];
-                $ext = ".php";
-                if (file_exists($pg . $ext)) {
-                    include($pg . $ext);
-                } else {
-                    include("header.php");
-                }echo $dod_nomeproj;echo $dod_respdem;
-                ?>
-            </div>
-            <!-- fim #header -->
-            <!-- inicio wrapper -->
-            <div id="wrapper">
-                <!-- inicio #menu -->
-                <div>
-                    <?php
-                    $pg = $_GET['pg'];
-                    $ext = ".php";
-                    if (file_exists($pg . $ext)) {
-                        include($pg . $ext);
-                    } else {
-                        include("menu.php");
-                    }
-                    ?>
-                </div>
-                <!-- fim #menu -->
-                <!-- inicio #pagina -->
-                <div id="pagina">
-                    <!-- inicio #pagina bgtopo -->
-                    <div id="pagina-bgtopo">
-                        <!-- inicio #pagina bgbtm -->
-                        <div id="pagina-bgbtm">
-                            <!-- inicio #menu esquerdo -->
-                            <div id="bar">
-                                <?php
-                                $pg = $_GET['pg'];
-                                $ext = ".php";
-                                if (file_exists($pg . $ext)) {
-                                    include($pg . $ext);
-                                } else {
-                                    include("sidebar.php");
-                                }
-                                ?>
-                            </div>
-                            <!-- fim #menuesquerdo -->
                             <!-- inicio #conteudo -->
                             <div id="content">
 
@@ -191,7 +136,7 @@ $dod_fonterec = $_POST['dod_f1_fonterec'];
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="4" align="center"><p>&nbsp;</p><p>____________________, _______ de ______________ de ___________ </p><p>&nbsp;</p></td>
+                                            <td colspan="4" align="center"><p>&nbsp;</p><p>Maceió, <?php data_extenso() ?> </p><p>&nbsp;</p></td>
                                         </tr>
                                         <tr>
                                             <td colspan="4">&nbsp; </td>
@@ -212,28 +157,6 @@ $dod_fonterec = $_POST['dod_f1_fonterec'];
                                 </table>
                             </div>                                                       
                             <!-- fim #conteudo -->
-                            <div style="clear: both;"></div>
-                        </div>
-                        <!-- fim #pagina bgbtm -->
-                    </div>
-                    <!-- fim #pagina tbgopo -->
-                </div>
-                <!-- fim #pagina -->
-            </div>
-            <!-- fim wrapper -->
-            <!-- inicio footer -->
-            <div>
-                <?php
-                                $pg = $_GET['pg'];
-                                $ext = ".php";
-                                if (file_exists($pg . $ext)) {
-                                    include($pg . $ext);
-                                } else {
-                                    include("footer.php");
-                                }
-                ?>
-            </div>
-            <!-- fim #footer -->
-        </div>
-    </body>
-</html>
+                            <?php 
+    include_once 'footer.php'; 
+?>

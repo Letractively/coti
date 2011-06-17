@@ -23,7 +23,7 @@ include_once "config.php";
        echo "</tr>";
        //$nomecoluna = mysql_field_name($result, $i);
        echo "<tr>";
-       echo "<td colspan='4'> Existem ". $numlinha . "  departamentos cadastrados </td>";
+       echo "<td colspan='4'> Existe ". $numlinha . "  departamento(s) cadastrado(s) </td>";
        echo "</tr>";
        if($numlinha > 0)
        {
@@ -38,12 +38,15 @@ include_once "config.php";
 //            }
             echo "<td class='tdh1top'>Nome</td>";
             echo "<td class='tdh1top'>Descri&ccedil;&atilde;o</td>";
+            echo "<td class='tdh1top'>Op&ccedil;&otilde;es </td>";
             echo "<tr />";
 
             //mostra os campos 
             while ($row = mysql_fetch_assoc($result_2))
             {
                  echo "<tr>";
+                    
+                    $id_departamento = $row['id_departamento'];
                     //echo "<td> ".$row['id_setor']."</td>";
                     //echo "<td> ".$row['cod_setor']."</td>" ;
                     echo "<td> ".$row['departamento_nome']."</td>" ;
@@ -51,6 +54,22 @@ include_once "config.php";
                     //echo "<td> ".$row['email_setor']."</td>" ;
                     //echo "<td> ".$row['tel_setor']."</td>" ;
                    //echo "<td> ".$row['departamento_setor']."</td>" ;
+                    
+                    echo "<td>";
+                    
+                        echo "<form name='editar' method ='post' action='edita_departamento.php' >";
+                        echo "<input type='hidden' name='editar_id' value='".$id_departamento."' /> ";
+                        echo "<input type='submit' name='editar' value='Editar' />";
+                        echo "</form>";
+    //                    echo $id_setor;
+    //                    exit ();
+                        echo "<form name='editar' method ='post' action='exclui_departamento.php' >";
+                        echo "<input type='hidden' name='excluir_id' value='".$id_departamento."' />";
+                        echo "<input type='submit' name='excluir' value='Excluir' />";
+                        echo "</form>";
+                    
+                    echo "</td>";
+                    
                  echo "<tr />";
             }
        }

@@ -24,13 +24,7 @@
                 <li>
                     <div id="bar2">
                         <?php
-                        $pg = $_GET['pg'];
-                        $ext = ".php";
-                        if (file_exists($pg . $ext)) {
-                            include($pg . $ext);
-                        } else {
                             include("sidebaradm.php");
-                        }
                         ?>
                     </div>
                 </li>
@@ -39,13 +33,7 @@
                 <li>
                     <div id="bar2">
                         <?php
-                        $pg = $_GET['pg'];
-                        $ext = ".php";
-                        if (file_exists($pg . $ext)) {
-                            include($pg . $ext);
-                        } else {
                             include("sidebarger.php");
-                        }
                         ?>
                     </div>
                 </li>
@@ -54,13 +42,7 @@
                 <li>
                     <div id="bar2">
                         <?php
-                        $pg = $_GET['pg'];
-                        $ext = ".php";
-                        if (file_exists($pg . $ext)) {
-                            include($pg . $ext);
-                        } else {
                             include("sidebaruser.php");
-                        }
                         ?>
                     </div>
                 </li>

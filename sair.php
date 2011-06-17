@@ -6,4 +6,5 @@
     session_destroy();
     
     include_once 'index.php';
+    include_once 'funcoes.php';
 ?>
