@@ -50,7 +50,7 @@ if (!$db_selected)
 		if(mysql_num_rows($_res)>0) 
                 {
                     $_resultado = mysql_fetch_assoc($_res);
-                    echo "Bem vindo {$_resultado["user_nome"]}";
+                    echo "<strong>Bem vindo(a) {$_resultado["user_nome"]}</strong>";
                     
                     //inicia a sessão
                     
@@ -73,7 +73,7 @@ if (!$db_selected)
 		}
                 else 
                 {
-                    echo "Usuário ou Senha Inválido...Tente novamente";
+                    echo "Usuário ou Senha Inválido... Tente novamente";
 		}
 		
 ?>

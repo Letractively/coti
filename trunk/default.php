@@ -4,22 +4,16 @@
 	<head>
             <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
             <title>CoTI </title>
-            <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+            <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+            <script type="text/javascript" src="js/scripts.js"></script>
             <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-               <script type="text/javascript" src="scripts.js"></script>
 	</head>
 	<body>
             <div id="prin">
 		<!-- inicio #header -->
 		<div>
 		    <?php
-			$pg = $_GET['pg'];
-			$ext = ".php"; 
-			if(file_exists($pg . $ext)) { 
-                            include($pg . $ext); 
-			}else{
-                            include("header.php");
-			}
+			include("header.php");
                     ?>
 			</div>
 			<!-- fim #header -->
@@ -28,13 +22,7 @@
 				<!-- inicio #menu -->
 				<div>
 				    <?php
-					$pg = $_GET['pg'];
-						$ext = ".php"; 
-					if(file_exists($pg . $ext)) { 
-						include($pg . $ext); 
-					}else{
-						include("menu.php");
-					}
+					include("menu.php");
                                     ?>
 				</div>
 				<!-- fim #menu -->
@@ -47,13 +35,7 @@
 							<!-- inicio #menu esquerdo -->
 							<div id="bar">
 								<?php
-									$pg = $_GET['pg'];
-									$ext = ".php"; 
-									if(file_exists($pg . $ext)) { 
-										include($pg . $ext); 
-									}else{
-										include("sidebar.php");
-									}
+									include("sidebar.php");
 								?>
 							</div>
 							<!-- fim #menuesquerdo -->

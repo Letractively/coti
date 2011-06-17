@@ -3,13 +3,15 @@
 	<head>
             
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+                <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+                <script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
 		<!-- inicio #header -->
 		<div id="header">
 			<div id="logo3">
 				<div id="logo">
-					<a href="http://www.ifal.edu.br" target="_blank"><img src="images/img04.png" align="left" style="border: none;" /></a>
+					<a href="http://www.ifal.edu.br" target="_blank"><img src="/images/img04.png" align="left" style="border: none;" /></a>
 					<!--<h1><a href="#">CoTI</a></h1>
 					<p> <a href="http://www.ifal.edu.br/">IFAL</a></p>-->
 				</div>

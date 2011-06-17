@@ -7,7 +7,7 @@ if(isset($_SESSION['usuario']))
    $id = $_SESSION['usuario'];
 
     include_once "config.php";
-    include_once "grosso_pagina.php"; 
+    include_once "default.php"; 
  
         $setor_id = $_POST["editar_id"];
 
@@ -90,7 +90,7 @@ if(isset($_SESSION['usuario']))
 
     $libera = mysql_free_result($result_2);
     
-    include_once 'grosso_fim_pagina.php';//escreve o cabeçalho da página
+    include_once 'footer.php';//escreve o cabeçalho da página
 
 }
  else

@@ -6,8 +6,8 @@ if(isset($_SESSION['usuario']))
 {
    $id = $_SESSION['usuario'];
 
-    include_once "config.php";
-    include_once "grosso_pagina.php"; 
+    include_once 'config.php';
+    include_once 'default.php'; 
    
     echo "<div id='content'>";
     
@@ -63,7 +63,7 @@ if(isset($_SESSION['usuario']))
             //Lista os departamentos cadastrados
             include_once 'lista_cargo.inc';
 
-            echo "<a href= 'cargos.php'> Voltar </a>";  
+            echo "<a href= 'cargos.php'><strong> << Voltar </strong></a>";  
           }    
         }
         
@@ -71,7 +71,7 @@ if(isset($_SESSION['usuario']))
     echo "</div>";
     $libera = mysql_free_result($result);
     //$libera = mysql_free_result($result_2);
-    include_once 'grosso_fim_pagina.php';//escreve o fim do cabeçalho da página
+    include_once 'footer.php';//escreve o fim do cabeçalho da página
 }
 else
 {

@@ -17,11 +17,11 @@
 
        echo "<table class ='table_form'>";
        echo "<tr>";
-       echo "<td class='tdh1top' colspan='4'>Usu&aacute;rios Casdastrados </td>";
+       echo "<td class='tdh1top' colspan='4'>Usu&aacute;rios Cadastrados </td>";
        echo "</tr>";
        //$nomecoluna = mysql_field_name($result, $i);
        echo "<tr>";
-       echo "<td colspan='4'> Existem ". $numlinha . " usu&aacute;rios cadastrados </td>";
+       echo "<td colspan='4'> Existe ". $numlinha . " usu&aacute;rio(s) cadastrado(s) </td>";
        echo "</tr>";
        if($numlinha > 0)
        {
@@ -37,7 +37,7 @@
             echo "<td class='tdh1top'>Nome</td>";
             echo "<td class='tdh1top'>Login</td>";
             echo "<td class='tdh1top'>Telefone</td>";
-            echo "<td class='tdh1top'>e-mail</td>";
+            echo "<td class='tdh1top'>E-mail</td>";
             echo "<tr />";
 
             //mostra os campos 
@@ -55,11 +55,9 @@
        }
     ///////////////////////////////////////
     echo "</table>";
-    echo "<a href= 'usuario.php'> Voltar </a>";  
+    echo "<a href= 'usuario.php'> <strong> << Voltar </strong></a>"; 
       
-}
-echo "</div>";
-
 $libera = mysql_free_result($result_2);
+}
 
 ?>

@@ -1,12 +1,13 @@
 <?php 
 
-session_start();
+    session_start();
 
-if(isset($_SESSION['usuario']))
-{
-$id = $_SESSION['usuario'];
-  
-include_once 'grosso_pagina.php';
+    if(isset($_SESSION['usuario']))
+    {
+        $id = $_SESSION['usuario'];
+
+        include_once 'default.php';
+        include_once 'funcoes.php';
 ?>
 
 
@@ -15,7 +16,7 @@ include_once 'grosso_pagina.php';
     <table class="table_form" align="center">
         <form  name="cadarea" method="POST" action="cadastra_setor.php">
             <tr>
-                <td class="tdh1top" colspan="4">Cadastrar Setores</td>
+                <td class="tdh1top" colspan="4">Cadastro de Setores</td>
             </tr>
             <tr>
                 <td colspan="4">&nbsp; </td>
@@ -45,9 +46,8 @@ include_once 'grosso_pagina.php';
             <tr>
               <td>Departamento:</td>                                                             
               <td>
-                  <? include_once 'funcoes.php'; ?>
-                  <?= lista_departarmento() ?>
-                </td>                                                                          
+                   <?= lista_depart() ?>
+              </td>                                                                          
               </tr>                                                                                          
             <tr>
                 <td colspan="4">&nbsp; </td>
@@ -71,7 +71,7 @@ include_once 'grosso_pagina.php';
 </div>
 
 <?php 
-    include_once 'grosso_fim_pagina.php';
+    include_once 'footer.php';
  }
  else
  {

@@ -4,7 +4,8 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>CoTI - Contrata&ccedil;&atilde;o de TI</title>
-		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+                <script type="text/javascript" src="js/scripts.js"></script>
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	</head>
 	<body>
@@ -12,13 +13,7 @@
 			<!-- inicio #header -->
 			<div>
 				<?php
-					$pg = $_GET['pg'];
-					$ext = ".php"; 
-					if(file_exists($pg . $ext)) { 
-						include($pg . $ext); 
-					}else{
-						include("header.php");
-					}
+					include("header.php");
 				?>
 			</div>
 			<!-- fim #header -->
@@ -56,13 +51,7 @@
 		<!-- inicio footer -->
 				<div>
 					<?php
-						$pg = $_GET['pg'];
-						$ext = ".php"; 
-						if(file_exists($pg . $ext)) { 
-							include($pg . $ext); 
-						}else{
-							include("footer.php");
-						}
+                                            include("footer.php");
 					?>
 				</div>
 				<!-- fim #footer -->
