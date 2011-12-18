@@ -1,9 +1,4 @@
 
-<html>
-	<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	</head>
-	<body>
 		<!-- inicio #conteudo -->
 		<div id="content">
 			<div class="post">
@@ -95,5 +90,3 @@
 		</div>
                 <!-- fim #conteudo -->
 		<div style="clear: both;"></div>
-	</body>
-</html>

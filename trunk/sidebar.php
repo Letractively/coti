@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -10,7 +9,7 @@
                 <li>
                     <!-- inicio #busca -->
                     <div id="search" >
-                        <form method="get" action="#">
+                        <form method="POST" action="#">
                             <div>
                                 <input type="text" name="s" id="search-text" value="Busca r&aacute;pida..." onfocus="this.value='';" />
                                 <input type="submit" id="search-submit" value="Buscar" />
