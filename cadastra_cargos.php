@@ -52,7 +52,7 @@ else
     
     if($result_2 === false)
     {
-        echo "Não foi possível buscar os dados" . mysql_error()."<br />";
+        echo "Não foi possível buscar os dados" . mysql_error() . "<br />";
     }
     else
     {
